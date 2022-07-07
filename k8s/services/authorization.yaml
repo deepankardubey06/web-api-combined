@@ -8,5 +8,4 @@ spec:
   - targetPort: 44372
     port: 44372
   selector:
-    tier: authorization-pod
-    app: frontend-pod
+    app: authorization-pod

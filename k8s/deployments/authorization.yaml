@@ -7,12 +7,10 @@ spec:
   selector:
     matchLabels:
       app: authorization-pod
-      type: frontend-auth
   template:
     metadata:
       labels:
         app: authorization-pod
-        type: frontend-auth
     spec:
       containers:
       - name: authorization
