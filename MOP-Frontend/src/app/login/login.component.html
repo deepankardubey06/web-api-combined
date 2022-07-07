@@ -1,8 +1,10 @@
-<div class="container-fluid" style="margin-top: 10%;">
+<div
+  style="background-image: url(https://snipboard.io/r7aFmf.jpg); background-repeat: no-repeat; background-size: cover;height: 92vh;">
+<div class="container-fluid" style="">
     <div class="row">
       <div class="offset-lg-3 col-lg-6">
 
-  <div class="card-box" style="background-color: #ccc;">
+  <div class="row" style="background-color: rgba(204, 204, 204, 0.326);">
       <form [formGroup]="Login" (ngSubmit)="ProceedLogin()">
 
 
@@ -12,7 +14,7 @@
     <div class="row">
       <div class="offset-lg-3 col-lg-6">
         <div class="form-group">
-          <label for="txtemail">User Email</label>
+          <label for="txtemail"><strong>User Email</strong></label>
           <input type="email" id="txtemail" class="form-control" formControlName="Email" placeholder="Enter the User Email"
             autocomplete="off" />
         </div>
@@ -21,7 +23,7 @@
     <div class="row">
       <div class="offset-lg-3 col-lg-6">
           <div class="form-group">
-              <label for="txtpassword">password</label>
+              <label for="txtpassword"><strong>Password</strong></label>
               <input type="password" id="txtpassword" class="form-control" formControlName="Password"  placeholder="Enter the password"  autocomplete="off"  />
           </div>
       </div>
@@ -31,8 +33,18 @@
         <br>
           <div class="form-group" style="text-align: center;">
              <button type="submit" class="btn btn-primary btn-lg btn-block" >Login</button>
+             <!-- <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button> -->
           </div>
       </div>
+
+      <div class="offset-lg-3 col-lg-2">
+        <br>
+        <div class="form-group" style="text-align: center;">
+          <button type="reset" value="Reset" class="btn btn-warning btn-lg btn-block">Reset</button>
+          <!-- <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button> -->
+        </div>
+      </div>
+
       <div class="col-lg-3">
           <br>
           <span></span>
@@ -44,3 +56,4 @@
   </div>
   </div>
   </div>
+</div>

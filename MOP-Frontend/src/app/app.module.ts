@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { SearchdrugidComponent } from './searchdrugid/searchdrugid.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { RefillstatusComponent } from './refillstatus/refillstatus.component';
+import { RefillduesComponent } from './refilldues/refilldues.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RefillstatusComponent } from './refillstatus/refillstatus.component';
     SearchdrugComponent,
     SearchdrugidComponent,
     SubscribeComponent,
-    RefillstatusComponent
+    RefillstatusComponent,
+    RefillduesComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
 import { ListingComponent } from './listing/listing.component';
 import { LoginComponent } from './login/login.component';
+import { RefillduesComponent } from './refilldues/refilldues.component';
 import { RefillstatusComponent } from './refillstatus/refillstatus.component';
 import { SearchdrugComponent } from './searchdrug/searchdrug.component';
 import { SearchdrugidComponent } from './searchdrugid/searchdrugid.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'subscribe', component: SubscribeComponent },
   { path: 'refillstatus', component: RefillstatusComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'refilldues', component: RefillduesComponent },
 ];
 
 @NgModule({
