@@ -15,3 +15,5 @@ spec:
       containers:
       - name: authorization
         image: deepankar06/authorization:1.0
+        ports:
+        - containerPort: 44372
