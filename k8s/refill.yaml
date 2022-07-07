@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: refill-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: refill-pod
+  template:
+    metadata:
+      labels:
+        app: refill-pod
+    spec:
+      containers:
+      - name: refill
+        image: deepankar06/refill:1.0

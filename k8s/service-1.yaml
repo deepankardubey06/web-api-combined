@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-servicespec:
+spec:
+  type: ClusterIP # internal communication
+  - targetPort: 80 # port where backend is exposed
+    port: 80 # port where service is exposed
+  selector:
+    tier: authorization-pod
+    app: drugs-pod
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-servicespec:
+spec:
+  type: ClusterIP # internal communication
+  - targetPort: 80 # port where backend is exposed
+    port: 80 # port where service is exposed
+  selector:
+    tier: authorization-pod
+    app: refill-pod
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: NodePort # external communication
+  ports:
+  - targetPort: 80 # port of pod
+    port: 80 # port of service
+    nodePort: 30000 # port of node (auto allocated)
+  selector:
+    app: myapp
+
+# kubernetes labels
+# pod, deployment, services

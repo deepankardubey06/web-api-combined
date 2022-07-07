@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: subscription-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: subscription-pod
+  template:
+    metadata:
+      labels:
+        app: subscription-pod
+    spec:
+      containers:
+      - name: subscription
+        image: deepankar06/subscription:1.0

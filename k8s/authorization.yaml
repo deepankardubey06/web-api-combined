@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authorization-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: authorization-pod
+  template:
+    metadata:
+      labels:
+        tier: authorization-pod
+    spec:
+      containers:
+      - name: authorization
+        image: deepankar06/authorization:1.0
