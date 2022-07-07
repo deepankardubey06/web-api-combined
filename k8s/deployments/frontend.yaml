@@ -6,11 +6,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend-pod
+      app: frontend
+      type: frontend-auth
   template:
     metadata:
       labels:
-        app: frontend-pod
+        app: frontend
+        type: frontend-auth
     spec:
       containers:
       - name: frontend

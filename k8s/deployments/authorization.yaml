@@ -6,11 +6,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      tier: authorization-pod
+      app: authorization-pod
+      type: frontend-auth
   template:
     metadata:
       labels:
-        tier: authorization-pod
+        app: authorization-pod
+        type: frontend-auth
     spec:
       containers:
       - name: authorization
